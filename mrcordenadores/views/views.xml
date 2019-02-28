@@ -1,0 +1,303 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+
+    <record model="ir.ui.view" id="mrcordenadores.ordenador_form_view">
+      <field name="name">listado de ordenadores</field>
+      <field name="model">mrcordenadores.ordenador</field>
+      <field name="arch" type="xml">
+        <form string = "Form ordenador">
+          <sheet>
+            <group>
+              <field name="name"/>
+              <field name="nombre"/>
+              <field name="estado"/>
+              <field name="caracteristicas"/>
+              <field name="precio"/>
+            </group>
+            <group>
+                <field name="empleado"/>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+
+    <record model="ir.ui.view" id="mrcordenadores.ordenador_tree_view">
+      <field name="name">mrcordenadores.ordenador.tree.view</field>
+      <field name="model">mrcordenadores.ordenador</field>
+      <field name="arch" type="xml">
+        <tree string = "Tree ordenador">
+              <field name="name"/>
+              <field name="nombre"/>
+              <field name="estado"/>
+        </tree>
+      </field>
+    </record>
+
+
+    <!-- actions opening views on models -->
+    <record model="ir.actions.act_window" id="mrcordenadores.ordenador_action_window">
+      <field name="name">Ventana Ordenadores</field>
+      <field name="res_model">mrcordenadores.ordenador</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+
+    <record model="ir.ui.view" id="mrcordenadores.empleado_form_view">
+      <field name="name">listado de Empleados</field>
+      <field name="model">mrcordenadores.empleado</field>
+      <field name="arch" type="xml">
+        <form>
+          <sheet>
+            <group>
+  <field name="perfil" widget="image" class="oe_avatar oe_right"/>
+              <field name="name"/>
+              <field name="nombre"/>
+              <field name="apellido"/>
+              <field name="puesto" />
+            </group>
+            <group>
+                <field name="ordenador" placeholder="Ordenador"/>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="mrcordenadores.empleado_tree_view">
+      <field name="name">Listado empleados</field>
+      <field name="model">mrcordenadores.empleado</field>
+      <field name="arch" type="xml">
+        <tree string = "Tree empleado">
+
+              <field name="name"/>
+              <field name="nombre"/>
+              <field name="apellido"/>
+              <field name="puesto"/>
+              <field name="ordenador"/>
+        </tree>
+      </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="mrcordenadores.empleado_action_window">
+      <field name="name">Ventana Empleados</field>
+      <field name="res_model">mrcordenadores.empleado</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+
+
+
+
+
+
+    <record model="ir.ui.view" id="mrcordenadores.mantenimiento_form_view">
+      <field name="name">Mantenimiento</field>
+      <field name="model">mrcordenadores.mantenimiento</field>
+      <field name="arch" type="xml">
+        <form string = "Form Mantenimiento">
+          <sheet>
+            <footer>
+               <button string="No funciona" name="mandarAReparar" type="object" class="oe_highlight"/>
+            </footer>
+            <group>
+              <field name="name"/>
+              <field name="empleado"/>
+              <field name="ordenador"/>
+              <field name="datos"/>
+              <field name="fecha"/>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+
+    <record model="ir.ui.view" id="mrcordenadores.mantenimiento_tree_view">
+      <field name="name">mrcordenadores.mantenimiento.tree.view</field>
+      <field name="model">mrcordenadores.mantenimiento</field>
+      <field name="arch" type="xml">
+        <tree string = "Tree mantenimiento">
+              <field name="name"/>
+              <field name="empleado"/>
+              <field name="ordenador"/>
+              <field name="fecha"/>
+        </tree>
+      </field>
+    </record>
+
+
+    <!-- actions opening views on models -->
+    <record model="ir.actions.act_window" id="mrcordenadores.mantenimiento_action_window">
+      <field name="name">Ventana Mantenimiento</field>
+      <field name="res_model">mrcordenadores.mantenimiento</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+
+
+
+
+
+    <record model="ir.ui.view" id="mrcordenadores.reparacion_form_view">
+      <field name="name">Reparacion</field>
+      <field name="model">mrcordenadores.reparacion</field>
+      <field name="arch" type="xml">
+        <form string = "Form Reparacion">
+          <sheet>
+            <footer>
+                <button string="Reparar" name="reparar" type="object" class="oe_highlight"/>
+
+              </footer>
+            <group>
+              <field name="name"/>
+              <field name="empleado"/>
+              <field name="ordenador"/>
+              <field name="estado"/>
+              <field name="fecha"/>
+              <field name="datos"/>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+
+    <record model="ir.ui.view" id="mrcordenadores.reparacion_tree_view">
+      <field name="name">mrcordenadores.reparacion.tree.view</field>
+      <field name="model">mrcordenadores.reparacion</field>
+      <field name="arch" type="xml">
+        <tree string = "Tree reparacion">
+              <field name="name"/>
+              <field name="empleado"/>
+              <field name="ordenador"/>
+              <field name="estado"/>
+              <field name="fecha"/>
+        </tree>
+      </field>
+    </record>
+
+
+    <!-- actions opening views on models -->
+    <record model="ir.actions.act_window" id="mrcordenadores.reparacion_action_window">
+      <field name="name">Ventana reparacion</field>
+      <field name="res_model">mrcordenadores.reparacion</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+
+
+
+
+
+
+
+    <record model="ir.ui.view" id="mrcordenadores.tecnico_form_view">
+      <field name="name">Tecnicos</field>
+      <field name="model">mrcordenadores.tecnico</field>
+      <field name="arch" type="xml">
+        <form string = "Form Tecnico">
+          <sheet>
+            <group>
+              <field name="name"/>
+              <field name="nombre"/>
+              <field name="apellido"/>
+              <field name="titulo"/>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+
+    <record model="ir.ui.view" id="mrcordenadores.tecnico_tree_view">
+      <field name="name">mrcordenadores.tecnico.tree.view</field>
+      <field name="model">mrcordenadores.tecnico</field>
+      <field name="arch" type="xml">
+        <tree string = "Tree tecnico">
+            <field name="name"/>
+            <field name="nombre"/>
+            <field name="apellido"/>
+            <field name="titulo"/>
+        </tree>
+      </field>
+    </record>
+
+
+    <!-- actions opening views on models -->
+    <record model="ir.actions.act_window" id="mrcordenadores.tecnico_action_window">
+      <field name="name">Ventana Tecnico</field>
+      <field name="res_model">mrcordenadores.tecnico</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- server action to the one above -->
+
+    <!-- <record model="ir.actions.server" id="mrcordenadores.action_server">
+      <field name="name">MRCOrdenadores server</field>
+      <field name="model_id" ref="model_mrcordenadores_mrcordenadores"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": self._name,
+        }
+      </field>
+    </record> -->
+
+
+    <!-- Top menu item -->
+
+    <menuitem name="MRCordenadores" id="mrcordenadores.menu_root"/>
+    -->
+    <!-- menu categories -->
+
+    <menuitem name="Ordenadores" id="mrcordenadores.menu_1" parent="mrcordenadores.menu_root"/>
+    <menuitem name="Personal" id="mrcordenadores.menu_2" parent="mrcordenadores.menu_root"/>
+    <menuitem name="Mantenimiento" id="mrcordenadores.menu_3" parent="mrcordenadores.menu_root"/>
+    <menuitem name="Reparacion" id="mrcordenadores.menu_4" parent="mrcordenadores.menu_root"/>
+
+    -->
+    <!-- actions -->
+
+    <menuitem name="Ordenadores" id="mrcordenadores.menu_1_list" parent="mrcordenadores.menu_1"
+              action="mrcordenadores.ordenador_action_window"/>
+
+    <menuitem name="Listado Empleados" id="mrcordenadores.menu_2_list" parent="mrcordenadores.menu_2"
+              action="mrcordenadores.empleado_action_window"/>
+
+    <menuitem name="Listado Mantenimiento" id="mrcordenadores.menu_3_list" parent="mrcordenadores.menu_3"
+              action="mrcordenadores.mantenimiento_action_window"/>
+
+    <menuitem name="Listado Reparacion" id="mrcordenadores.menu_4_list" parent="mrcordenadores.menu_4"
+              action="mrcordenadores.reparacion_action_window"/>
+
+    <menuitem name="Listado Tecnicos" id="mrcordenadores.menu_5_list" parent="mrcordenadores.menu_2"
+              action="mrcordenadores.tecnico_action_window"/>
+
+
+
+
+    <!-- <menuitem name="Server to list" id="mrcordenadores" parent="mrcordenadores.menu_2"
+              action="mrcordenadores.action_server"/>
+               -->
+
+  </data>
+</odoo>

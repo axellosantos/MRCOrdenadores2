@@ -1,0 +1,127 @@
+<odoo>
+    <data>
+      <record id="ordenador1" model="mrcordenadores.ordenador">
+      <field name="name">001</field>
+         <field name="nombre">Ordenador E1</field>
+         <field name="estado">0</field>
+         <field name="caracteristicas">Ordenador de los empleados situado en la fila 1 ordenador 1</field>
+         <field name="precio">900</field>
+       </record>
+
+       <record id="ordenador2" model="mrcordenadores.ordenador">
+       <field name="name">002</field>
+          <field name="nombre">Ordenador E2</field>
+          <field name="estado">0</field>
+          <field name="caracteristicas">Ordenador de los empleados situado en la fila 1 ordenador 2</field>
+          <field name="precio">900</field>
+        </record>
+
+        <record id="ordenador3" model="mrcordenadores.ordenador">
+        <field name="name">003</field>
+           <field name="nombre">Ordenador E3</field>
+           <field name="estado">0</field>
+           <field name="caracteristicas">Ordenador de los empleados situado en la fila 1 ordenador 3</field>
+           <field name="precio">900</field>
+         </record>
+
+         <record id="ordenador4" model="mrcordenadores.ordenador">
+         <field name="name">004</field>
+            <field name="nombre">Ordenador P1</field>
+            <field name="estado">0</field>
+            <field name="caracteristicas">Ordenador de los programadores situado en la fila 2 ordenador 1</field>
+            <field name="precio">1500</field>
+          </record>
+
+          <record id="ordenador5" model="mrcordenadores.ordenador">
+          <field name="name">005</field>
+             <field name="nombre">Ordenador P2</field>
+             <field name="estado">1</field>
+             <field name="caracteristicas">Ordenador de los programadores situado en la fila 2 ordenador 2</field>
+             <field name="precio">1500</field>
+           </record>
+
+           <record id="ordenador6" model="mrcordenadores.ordenador">
+           <field name="name">006</field>
+              <field name="nombre">Ordenador P3</field>
+              <field name="estado">1</field>
+              <field name="caracteristicas">Ordenador de los programadores situado en la fila 1 ordenador 1</field>
+              <field name="precio">1500</field>
+            </record>
+
+
+
+       <record id="empleado1" model="mrcordenadores.empleado">
+       <field name="name">16628613G</field>
+          <field name="nombre">Juan</field>
+          <field name="apellido">Pedro</field>
+          <field name="puesto">Recursos Humanos</field>
+          <field name="ordenador" ref ="ordenador1"></field>
+        </record>
+
+
+        <record id="empleado2" model="mrcordenadores.empleado">
+        <field name="name">16624683G</field>
+           <field name="nombre">Manuel</field>
+           <field name="apellido">Garcia</field>
+           <field name="puesto">Atencion al cliente</field>
+           <field name="ordenador" ref ="ordenador2"></field>
+         </record>
+
+         <record id="empleado3" model="mrcordenadores.empleado">
+         <field name="name">15668613G</field>
+            <field name="nombre">Maria</field>
+            <field name="apellido">Perez</field>
+            <field name="puesto">Atencion al cliente</field>
+            <field name="ordenador" ref ="ordenador3"></field>
+          </record>
+
+          <record id="empleado4" model="mrcordenadores.empleado">
+          <field name="name">15868654G</field>
+             <field name="nombre">Aitor</field>
+             <field name="apellido">Gómez</field>
+             <field name="puesto">Programador de Python</field>
+             <field name="ordenador" ref ="ordenador4"></field>
+           </record>
+
+           <record id="empleado5" model="mrcordenadores.empleado">
+           <field name="name">17828673G</field>
+              <field name="nombre">Sergio</field>
+              <field name="apellido">Antuán</field>
+              <field name="puesto">Diseñador Gráfico</field>
+              <field name="ordenador" ref ="ordenador5"></field>
+            </record>
+
+
+             <record id="empleado6" model="mrcordenadores.empleado">
+            <field name="name">17358020G</field>
+               <field name="nombre">Javier</field>
+               <field name="apellido">Arruego</field>
+               <field name="puesto">Pelacables</field>
+               <field name="ordenador" ref ="ordenador6"></field>
+             </record>
+
+
+             <record id="tecnico1" model="mrcordenadores.tecnico">
+            <field name="name">12458623E</field>
+               <field name="nombre">Nathan</field>
+               <field name="apellido">Gutierrez</field>
+               <field name="titulo">Tecnico de Mantenimiento de ordenadores</field>
+             </record>
+
+
+             <record id="tecnico2" model="mrcordenadores.tecnico">
+            <field name="name">23484693C</field>
+               <field name="nombre">Gonzalo</field>
+               <field name="apellido">Ulecia</field>
+               <field name="titulo">Tecnico de Reparacion de ordenadores</field>
+             </record>
+
+
+
+
+
+
+
+
+    </data>
+</odoo>
